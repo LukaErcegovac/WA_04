@@ -4,17 +4,21 @@
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
 
-  data(){
-    return{
-
-    }
+  data() {
+    return {
+      Books: [],
+    };
   },
-  components: {
-    
-  }
-}
+  mounted: {
+    async getData() {
+      let data = await fetch("http://localhost:3000/knjige");
+      let response = await data.json();
+    },
+  },
+  components: {},
+};
 </script>
 
 <style>
