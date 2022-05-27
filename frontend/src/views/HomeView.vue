@@ -1,10 +1,18 @@
 <template>
-  <div class="home">
-    <li v-for="book in Books" :key="book.id">
-      <router-link :to="{ name: 'about', params: { bookId: book.id } }">
-        {{ book.id }} {{ book.naziv }}
-      </router-link>
-    </li>
+  <div class="home container">
+    <router-link
+      :to="{ name: 'about', params: { Id: book.id } }"
+      v-for="book in Books"
+      :key="book.id"
+    >
+      <div class="card">
+        <div class="card-body">
+          <b>Id: </b> {{ book.id }} <br />
+          <b>Naziv: </b> {{ book.naziv }} <br />
+          <b>Isnb: </b> {{ book.isbn }}
+        </div>
+      </div>
+    </router-link>
   </div>
 </template>
 
