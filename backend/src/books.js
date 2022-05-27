@@ -1,4 +1,4 @@
-export const Data = [
+export let Data = [
   {
     id: 0,
     url: "https://www.anapioficeandfire.com/api/books/1",
@@ -4873,11 +4873,11 @@ export const Data = [
   },
 ];
 
-export const Books = Data.map((res) => {
+export let Books = Data.map((res) => {
   return { id: res.id, naziv: res.name, isbn: res.isbn };
 });
 
-export const BooksDetails = Data.map((res) => {
+export let BooksDetails = Data.map((res) => {
   return {
     id: res.id,
     naziv: res.name,

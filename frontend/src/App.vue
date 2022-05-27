@@ -1,23 +1,12 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <script>
 export default {
   name: "App",
-
-  data() {
-    return {
-      Books: [],
-    };
-  },
-  mounted: {
-    async getData() {
-      let data = await fetch("http://localhost:3000/knjige");
-      let response = await data.json();
-    },
-  },
-  components: {},
 };
 </script>
 
