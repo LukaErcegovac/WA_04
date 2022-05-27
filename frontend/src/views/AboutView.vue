@@ -1,16 +1,23 @@
 <template>
   <div class="about container px-5">
-    <p>Id: {{ Book.id }}</p>
-    <p>Naziv: {{ Book.naziv }}</p>
-    <p>Isbn: {{ Book.isbn }}</p>
-    <p>Autori: {{ Book.autori }}</p>
-    <router-link to="/" class="d-grid gap-2 col-6 mx-auto px-5">
-      <button
-        type="button"
-        class="btn-close mx-auto"
-        aria-label="Close"
-      ></button>
-    </router-link>
+    <div class="card-body">
+      <h3 class="card-title"><b>Details</b></h3>
+      <p class="card-text">
+        <b>Id:</b> {{ Book.id }}<br />
+        <b>Naziv:</b> {{ Book.naziv }}<br />
+        <b>Isbn:</b>{{ Book.isbn }}<br />
+        <b>Autori:</b> {{ Book.autori }}
+      </p>
+      <router-link to="/" class="d-grid gap-2 col-6 mx-auto px-5 w-10">
+        <h4>
+          <button
+            type="button"
+            class="btn-close mx-auto"
+            aria-label="Close"
+          ></button>
+        </h4>
+      </router-link>
+    </div>
   </div>
 </template>
 

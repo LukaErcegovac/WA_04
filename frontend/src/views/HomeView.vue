@@ -1,6 +1,8 @@
 <template>
   <div class="home container">
     <router-link
+      style="display: inline-block; text-decoration: none"
+      class="text-dark"
       :to="{ name: 'about', params: { Id: book.id } }"
       v-for="book in Books"
       :key="book.id"
